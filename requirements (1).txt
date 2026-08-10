@@ -1,0 +1,8 @@
+# FKIF — Python dependencies (tested with Python 3.10+)
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+scikit-fuzzy
+networkx
