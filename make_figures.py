@@ -257,6 +257,22 @@ def fig_attribution():
     ax.set_axisbelow(True); ax.invert_yaxis()
     fig.tight_layout(); save(fig, 'fig_attribution')
 
+FIGURE_NUMBERS = {'fig_architecture': 1, 'fig_membership': 2, 'fig_marginals': 3,
+                  'fig_sweep': 4, 'fig_surface': 5, 'fig_semantic': 6,
+                  'fig_productsum': 7, 'fig_attribution': 8}
+
 print('generating figures:')
 fig_architecture(); fig_membership(); fig_sweep(); fig_surface()
 fig_marginals(); fig_productsum(); fig_semantic(); fig_attribution()
+
+# Also emit copies numbered to match the manuscript, into Figures/.
+import shutil
+from PIL import Image
+os.makedirs('Figures', exist_ok=True)
+print('writing manuscript-numbered copies to Figures/:')
+for name, n in sorted(FIGURE_NUMBERS.items(), key=lambda kv: kv[1]):
+    src = f'figs/{name}.png'
+    shutil.copy(src, f'Figures/Figure{n}.png')
+    Image.open(src).convert('RGB').save(
+        f'Figures/Figure{n}.tif', format='TIFF', compression='tiff_lzw', dpi=(600, 600))
+    print(f'   Figure{n}  <- {name}')

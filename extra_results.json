@@ -1,0 +1,175 @@
+{
+ "monotonicity": {
+  "sup-min": [
+   {
+    "perturbation": "+1",
+    "trials": 367,
+    "violations": 6,
+    "rate_pct": 1.63,
+    "max_magnitude": 1.245,
+    "class_violations": 0
+   },
+   {
+    "perturbation": "+2",
+    "trials": 337,
+    "violations": 5,
+    "rate_pct": 1.48,
+    "max_magnitude": 0.997,
+    "class_violations": 0
+   },
+   {
+    "perturbation": "+3",
+    "trials": 297,
+    "violations": 11,
+    "rate_pct": 3.7,
+    "max_magnitude": 1.245,
+    "class_violations": 0
+   },
+   {
+    "perturbation": "Pareto dominance",
+    "trials": 48513,
+    "violations": 39,
+    "rate_pct": 0.08,
+    "max_magnitude": 1.245,
+    "class_violations": 0
+   }
+  ],
+  "product-sum": [
+   {
+    "perturbation": "+1",
+    "trials": 367,
+    "violations": 0,
+    "rate_pct": 0.0,
+    "max_magnitude": 0.0,
+    "class_violations": 0
+   },
+   {
+    "perturbation": "+2",
+    "trials": 337,
+    "violations": 0,
+    "rate_pct": 0.0,
+    "max_magnitude": 0.0,
+    "class_violations": 0
+   },
+   {
+    "perturbation": "+3",
+    "trials": 297,
+    "violations": 0,
+    "rate_pct": 0.0,
+    "max_magnitude": 0.0,
+    "class_violations": 0
+   },
+   {
+    "perturbation": "Pareto dominance",
+    "trials": 48513,
+    "violations": 0,
+    "rate_pct": 0.0,
+    "max_magnitude": 0.0,
+    "class_violations": 0
+   }
+  ]
+ },
+ "product_sum_vs_supmin": {
+  "spearman": 0.9331,
+  "class_agreement_pct": 100.0,
+  "anchors": {
+   "all8": 12.57,
+   "all5": 42.67,
+   "all2": 91.89,
+   "strongtech_weakcomp": 68.0
+  },
+  "ps_marginals": {
+   "Critical": 166,
+   "Low": 192,
+   "High": 24,
+   "Moderate": 18
+  },
+  "sm_marginals": {
+   "Critical": 166,
+   "Low": 192,
+   "High": 24,
+   "Moderate": 18
+  }
+ },
+ "measurement_error": [
+  {
+   "sigma": 0.25,
+   "trials": 2000,
+   "class_stability_pct": 99.0,
+   "mean_abs_index_shift": 0.28,
+   "p95_abs_index_shift": 0.0
+  },
+  {
+   "sigma": 0.5,
+   "trials": 2000,
+   "class_stability_pct": 93.9,
+   "mean_abs_index_shift": 1.95,
+   "p95_abs_index_shift": 22.63
+  },
+  {
+   "sigma": 1.0,
+   "trials": 2000,
+   "class_stability_pct": 89.5,
+   "mean_abs_index_shift": 3.63,
+   "p95_abs_index_shift": 28.68
+  }
+ ],
+ "attribution": {
+  "tech": {
+   "mean": 1.71,
+   "median": 0.0,
+   "max": 29.92
+  },
+  "org": {
+   "mean": 0.82,
+   "median": 0.0,
+   "max": 28.68
+  },
+  "sec": {
+   "mean": 14.78,
+   "median": 0.08,
+   "max": 76.56
+  },
+  "eco": {
+   "mean": 1.11,
+   "median": 0.0,
+   "max": 29.92
+  }
+ },
+ "archetypes_supmin": {
+  "digitally mature niche": [
+   12.83,
+   "Low"
+  ],
+  "mid-maturity tier-2": [
+   42.67,
+   "Moderate"
+  ],
+  "low-maturity traditional": [
+   91.62,
+   "Critical"
+  ],
+  "strong technical, weak compliance": [
+   68.0,
+   "High"
+  ]
+ },
+ "archetypes_ps": {
+  "digitally mature niche": [
+   12.57,
+   "Low"
+  ],
+  "mid-maturity tier-2": [
+   42.67,
+   "Moderate"
+  ],
+  "low-maturity traditional": [
+   91.89,
+   "Critical"
+  ],
+  "strong technical, weak compliance": [
+   68.0,
+   "High"
+  ]
+ }
+}

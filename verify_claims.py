@@ -11,7 +11,7 @@ m, mps = FKIF(), FKIF_PS()
 i_sm = np.load('idx_supmin.npy'); i_ps = np.load('idx_ps.npy')
 
 print("=" * 68)
-print("CLAIM 1: Spearman 0.933 is depressed by tied plateaus, not disagreement")
+print("CHECK 1: what accounts for the sup-min / product-sum rank correlation")
 print("=" * 68)
 u_sm, u_ps = np.unique(i_sm), np.unique(i_ps)
 print(f"distinct index values: sup-min {len(u_sm)}, product-sum {len(u_ps)} (of 400)")
@@ -41,7 +41,7 @@ print(f"mean |difference|   : {np.mean(np.abs(i_sm - i_ps)):.3f}")
 
 print()
 print("=" * 68)
-print("CLAIM 2: measurement-error percentiles (p95 = 0.00 at sigma 0.25 looks wrong)")
+print("CHECK 2: shape of the measurement-error shift distribution")
 print("=" * 68)
 c_sm = [m.risk_class(r) for r in i_sm]
 for sigma in (0.25, 0.5, 1.0):
@@ -61,7 +61,7 @@ for sigma in (0.25, 0.5, 1.0):
 
 print()
 print("=" * 68)
-print("CLAIM 3: symbolic/numeric divergence is caused by linguistic approximation")
+print("CHECK 3: is symbolic/numeric divergence confined to term-overlap regions?")
 print("=" * 68)
 FAC_MF = mf_set(FAV_UNIV)
 def memberships(x):

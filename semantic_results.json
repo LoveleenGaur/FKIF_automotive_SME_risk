@@ -1,0 +1,32 @@
+{
+ "n": 400,
+ "rules_recovered": 129,
+ "L1": 48,
+ "L2": 81,
+ "exact": 338,
+ "within_one": 393,
+ "unresolved": 0,
+ "hermit_seconds": 2.73,
+ "swrl_ms_per_case": 0.18,
+ "numeric_marginals": {
+  "Critical": 166,
+  "Low": 192,
+  "High": 24,
+  "Moderate": 18
+ },
+ "symbolic_marginals": {
+  "Critical": 137,
+  "Low": 174,
+  "Moderate": 44,
+  "High": 45
+ },
+ "disagreements": {
+  "High->Moderate": 5,
+  "Low->Moderate": 21,
+  "Moderate->Low": 1,
+  "Critical->Moderate": 5,
+  "Moderate->High": 4,
+  "Critical->High": 24,
+  "High->Low": 2
+ }
+}
