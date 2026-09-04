@@ -7,3 +7,6 @@ scikit-fuzzy>=0.5.0
 matplotlib>=3.6
 networkx>=3.0
 pillow>=9.0
+# owlready2 invokes HermiT through a bundled JVM. Java 17 or 21 must be on PATH.
+owlready2>=0.51
+rdflib>=7.0
